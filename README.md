@@ -1,6 +1,8 @@
 # Multi-Agent Code Review System
 (Work in progress) A multi-agent system for automated and intelligent code review.  Leveraging AI and collaborative agents to improve code quality, streamline workflows, and enhance team collaboration.
 
+The top-level task "Automated Code Review" is decomposed into a hierarchy where the Planner/Interpreter Agent interprets the intent from user input and manages subordinate agents. Each agent focuses on a specific task, making the system modular and scalable. The intermediate output will then be passed to an Aggregation & Review Agent for consolidation
+
 <br>
 
 ```mermaid
@@ -12,7 +14,7 @@ flowchart TB
     RCA --> SAA[Static Analysis Agent]
     RCA --> DAA[Dynamic Analysis Agent]
     RCA --> DSA[Documentation & Security Agent]
-    CEA --> ALA[Aggregation & LLM Review Agent]
+    CEA --> ALA[Aggregation & Review Agent]
     SAA --> ALA
     DAA --> ALA
     DSA --> ALA
